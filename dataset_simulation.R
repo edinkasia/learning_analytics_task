@@ -42,7 +42,8 @@ student_data_wide <- student_data %>%
 
 # pivot to longer, so that the data are in a more complex format
 student_data_long <- student_data_wide %>% 
-  pivot_longer(cols = `2022-09-19`:`2022-11-02`, names_to = "date", values_to = "attendance") %>% 
+  pivot_longer(cols = `2022-09-19`:`2022-11-02`, names_to = "date", 
+               values_to = "attendance") %>% 
   select(-lectures_attended, -error)
 
 # sanity checks
