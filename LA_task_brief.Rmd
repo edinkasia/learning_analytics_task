@@ -1,0 +1,43 @@
+---
+title: "Learning Analytics"
+author: "Intern interview task"
+date: '`r Sys.Date()`'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction to the role
+
+Thank you for your interest in the Learning Analytics Intern position. We are looking for a student to help us clean and analyse data from an ongoing project about lectures and lecture recordings. We are hoping that your experience and a student, together with your R programming skills, will help you excel in this role.
+
+## Introduction to the task
+
+The aim of this task is to:
+
+1. give you an opportunity to show off your R skills
+2. give you an opportunity to reflect on how different elements of student engagement and achievement may be related
+
+In the task repository on GitHub, you will find a .csv file called student_dataset. This is a simulated (i.e. not real) dataset that we built for the purposes of this task. The dataset includes data from 100 students at the University whose course included 3 lectures a week. For each student, we know which lectures they attended or did not attend, and their final mark at the end of the course. The data are provided in a long format (i.e. multiple rows for each student, but a single row for each unique combination of student and lecture date). 
+
+Here is a more detailed description of each variable:
+
+* `id`: unique student identification number (numeric)
+* `final_mark`: the final mark the student achieved on the course (numeric)
+* `date`: date of a lecture (date)
+* `attendance`: whether or not the student attended a lecture on this date (factor with two levels: present and absent)
+
+## Your task
+Your task is to use R to prepare **one** data visualisation that illustrates some aspect of the data. It is up to you to decide what you would like to focus on. The dataset is quite simple, but there should still be at least two options here.
+
+Try and make your graph as informative as possible, but also visually interesting. Try playing around with colours, themes, etc.
+
+During the interview, you will have 3-5 minutes to present your graph and talk about the insights that it brings. We will invite you to share your screen, so make sure that you have the graph available in a suitable size. 
+
+After your presentation, we will ask you 1-2 follow-up questions about the graph and your coding process (e.g. we may ask how you plotted a particular thing). This may require you to share your code with us (by sharing your screen), so do make sure that your code is clean and easy to follow. 
+
+
+
+
