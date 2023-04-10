@@ -17,8 +17,17 @@ student_data <- tibble(id = id, lecture_date = rep(lecture_date, number_of_stude
 set.seed(20)
 attendance_options <- c("present", "absent")
 student_data <- student_data %>% 
-  mutate(attendance = sample(attendance_options, n(), prob = c(0.6, 0.4), 
-                             replace = TRUE))
+  rowwise %>% 
+  mutate(attendance = case_when(lecture_date < ymd("2022-10-30") ~ sample(attendance_options, 1, prob = c(0.7, 0.3), 
+                             replace = TRUE),
+                             lecture_date > ymd("2022-10-30") ~ sample(attendance_options, 1, prob = c(0.3, 0.7), 
+                                                                replace = TRUE)))
+
+# sanity check
+
+# student_data %>% 
+#   group_by(lecture_date) %>% 
+#   summarise(students_attending = sum(attendance == "present"))
 
 # Add a column with student mark
 
